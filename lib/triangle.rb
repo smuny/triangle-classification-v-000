@@ -19,11 +19,8 @@ attr_accessor :a, :b, :c
       :equilateral
     elsif a == b || b == c || c == a
       :isosceles
-    elsif
-      :scalene
     else
-      self != Triangle
-      raise TriangleError
+      :scalene
     end
   end
 end
