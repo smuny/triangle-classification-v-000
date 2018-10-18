@@ -19,12 +19,13 @@ attr_accessor :a, :b, :c
       :equilateral
     elsif a == b || b == c || c == a
       :isosceles
-    else
+    elsif
       :scalene
+    else
+      self != Triangle
+      raise TriangleError
     end
   end
-  self != Triangle
-      raise TriangleError
 end
 
   def true_triangle
