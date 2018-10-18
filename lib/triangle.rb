@@ -23,6 +23,8 @@ attr_accessor :a, :b, :c
       :scalene
     end
   end
+  self != Triangle
+      raise TriangleError
 end
 
   def true_triangle
