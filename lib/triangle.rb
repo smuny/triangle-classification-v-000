@@ -26,15 +26,10 @@ attr_accessor :a, :b, :c
 end
 
   def true_triangle
-    true_triangle = [(a + b > c), (a + c > b), (b + c > a)] 
+    triangle = [(a + b > c), (a + c > b), (b + c > a)] 
     
-    [a,b,c].each { |x| actual_triangle}
-      
-      if [a,b,c] > 0 && actual_triangle
-                true
-      else    
-        false
-  end
+    [a,b,c].each { |x| raise TriangleError if x == 0 }
+    triangle.each { |x| raise TriangleError if x == false }
   end         
 class TriangleError < StandardError
 end
